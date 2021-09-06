@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -7,6 +8,8 @@ app_name = 'core'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('rest-auth/', include('rest_auth.urls')),
+    path('rest-auth/registration/', include('rest_auth.registration.urls')),
 ]
 
 if settings.DEBUG:
