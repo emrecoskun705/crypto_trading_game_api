@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django_filters',
 
     #My Apps
-    'api',
+    'crypto',
+    'user',
 ]
 
 # django allauth settings
